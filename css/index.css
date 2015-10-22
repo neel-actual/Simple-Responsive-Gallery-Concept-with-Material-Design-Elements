@@ -1,0 +1,80 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: url('http://i2.wp.com/thezinx.com/wp-content/uploads/where-tahrs-live.jpg?resize=620%2C390');
+  height: 100vh;
+  background-size: 100% 100%;
+  font-family: 'Roboto';
+  color: #fff;
+}
+
+.packery {}
+/* clearfix */
+
+.packery:after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+
+.item {
+  width: 25%;
+  height: auto;
+  float: left;
+  border: 4px solid rgba(255,255,255,0);
+}
+
+.item-content {
+  width: 100%;
+  height: 100%;
+}
+/* both item and item content change size */
+
+.item.is-expanded,
+.item.is-expanded .item {
+  width: 75%;
+  height: auto;
+}
+
+.item:hover {
+  cursor: pointer;
+}
+
+.caption {
+  background-color: #2196F3;
+  position: absolute;
+  color: #fff;
+  z-index: 100;
+  -webkit-transition: all 50ms ease-out;
+  -moz-transition: all 100ms ease-out;
+  -o-transition: all 100ms ease-out;
+  -ms-transition: all 100ms ease-out;
+  transition: all 100ms ease-out;
+  right: 0;
+  border-radius: 50px;
+  -moz-box-shadow: 0 0 40px #000;
+  -webkit-box-shadow: 0 0 40px #000;
+  box-shadow: 0 0 40px #000;
+}
+
+.simple-caption {
+  width: 50px;
+  display: block;
+  bottom: -30px;
+  line-height: 50px;
+  text-align: center;
+  visibility: hidden;
+}
+
+.item:hover .simple-caption {
+  -moz-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  opacity: 1;
+  transform: translateY(-100%);
+  visibility: visible;
+}
